@@ -1,0 +1,202 @@
+'<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="241dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/group_15" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/Tab_List"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Btn_search"
+        app:tabIndicatorColor="#000000"
+        app:tabSelectedTextColor="#00BCD4"
+        app:tabTextColor="@android:color/darker_gray">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/Tab_Folders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Folders" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/Tab_Playlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Playlist" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/Tab_Artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Artist" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/Tab_Album"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Album" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/Tab_Podcast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Podcast" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/Tab_Menu"
+        android:layout_width="406dp"
+        android:layout_height="82dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tabIconTint="@color/material_dynamic_neutral100"
+        app:tabIndicatorColor="#000000"
+        app:tabSelectedTextColor="#00BCD4"
+        app:tabTextColor="@android:color/darker_gray">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/Tab_Home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/house1"
+            android:text="Home" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/Tab_Explore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/search"
+            android:text="Explore" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/Tab_Library"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/fol"
+            android:text="Library" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <ImageButton
+        android:id="@+id/Btn_search"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#000000"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/search" />
+
+    <!-- Bottom Navigation -->
+
+    <ScrollView
+        android:layout_width="414dp"
+        android:layout_height="492dp"
+        app:layout_constraintBottom_toTopOf="@+id/Tab_Menu"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/MtBtn_2"
+                android:layout_width="330dp"
+                android:layout_height="87dp"
+                android:backgroundTint="@color/black"
+                android:text="Your Liked Playlist"
+                android:textSize="20dp"
+                app:icon="@drawable/love"
+                app:iconSize="60dp"
+                app:iconTint="@color/material_dynamic_neutral100" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/MtBtn_1"
+                android:layout_width="330dp"
+                android:layout_height="87dp"
+                android:layout_marginTop="4dp"
+                android:backgroundTint="@color/black"
+                android:text="Add New Playlist"
+                android:textSize="20dp"
+                app:icon="@drawable/add"
+                app:iconSize="60dp"
+                app:iconTint="@color/material_dynamic_neutral100" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Recently played"
+                android:textColor="#00BCD4"
+                android:textSize="18dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/black"
+                android:text="moods"
+                android:textAlignment="textStart"
+                android:textSize="18dp"
+                app:icon="@drawable/music"
+                app:iconSize="80dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/black"
+                android:text="randoms"
+                android:textAlignment="textStart"
+                android:textSize="18dp"
+                app:icon="@drawable/music"
+                app:iconSize="80dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/black"
+                android:text="my life"
+                android:textAlignment="textStart"
+                android:textSize="18dp"
+                app:icon="@drawable/music"
+                app:iconSize="80dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/material_dynamic_neutral100"
+                android:text="styles of me"
+                android:textAlignment="textStart"
+                android:textSize="18dp"
+                app:icon="@drawable/music"
+                app:iconSize="80dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
