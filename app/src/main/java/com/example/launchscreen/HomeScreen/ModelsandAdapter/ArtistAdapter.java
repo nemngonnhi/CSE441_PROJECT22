@@ -1,2 +1,4 @@
-package com.example.launchscreen.HomeScreen.ModelsandAdapter;public class ArtistAdapter {
+package com.example.launchscreen.HomeScreen.ModelsandAdapter;
+
+public class ArtistAdapter {
 }

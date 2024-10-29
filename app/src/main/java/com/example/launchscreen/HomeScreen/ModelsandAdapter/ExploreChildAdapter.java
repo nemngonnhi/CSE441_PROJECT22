@@ -1,8 +1,6 @@
-package com.example.home.models;
+package com.example.launchscreen.HomeScreen.ModelsandAdapter;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.home.R;
+import com.example.launchscreen.R;
 import com.google.android.material.imageview.ShapeableImageView;
 
 import java.util.List;
@@ -31,7 +29,7 @@ public class ExploreChildAdapter extends RecyclerView.Adapter<ExploreChildAdapte
 
     @NonNull
     @Override
-    public ExploreChildAdapter.ECViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ECViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.explore_child_rv_layout,null,false);
         return new ECViewHolder(view);
     }

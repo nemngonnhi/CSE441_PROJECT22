@@ -1,4 +1,4 @@
-package com.example.home.models;
+package com.example.launchscreen.HomeScreen.ModelsandAdapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.home.R;
+import com.example.launchscreen.R;
 import com.google.android.material.imageview.ShapeableImageView;
 
 import java.util.List;
@@ -26,13 +26,13 @@ public class HomeChildAdapter extends RecyclerView.Adapter<HomeChildAdapter.View
 
     @NonNull
     @Override
-    public HomeChildAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.home_child_rv_layout, null, false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull HomeChildAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
         holder.ivHomeChildItem.setImageResource(homeChildModelList.get(position).image);
         holder.tv_child_title.setText(homeChildModelList.get(position).title);

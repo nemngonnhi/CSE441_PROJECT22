@@ -1,4 +1,4 @@
-package com.example.home.models;
+package com.example.launchscreen.HomeScreen.ModelsandAdapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.home.R;
+import com.example.launchscreen.R;
 
 import java.util.List;
 
@@ -26,7 +26,7 @@ public class ExploreParentAdapter extends RecyclerView.Adapter<ExploreParentAdap
 
     @NonNull
     @Override
-    public ExploreParentAdapter.EPViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public EPViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.explore_parent_rv_layout,null,false);
         return new EPViewHolder(view);
     }

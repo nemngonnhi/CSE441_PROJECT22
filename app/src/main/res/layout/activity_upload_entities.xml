@@ -5,6 +5,50 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeScreen.Activities.UploadEntities">
+    tools:context=".HomeScreen.Activities.UploadEntities"
+    android:background="@color/primcolor"
+    android:padding="20dp">
+
+    <Button
+        android:id="@+id/uploadArtist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload An Artist"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/titlecolor"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <Button
+        android:id="@+id/uploadAsong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload a song"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/titlecolor"
+        app:layout_constraintTop_toBottomOf="@id/uploadArtist"
+        />
+    <Button
+        android:id="@+id/uploadAlbum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload An Album"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/titlecolor"
+        app:layout_constraintTop_toBottomOf="@+id/uploadAsong"
+        />
+    <Button
+        android:id="@+id/upLoadGenre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload A Genre"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/titlecolor"
+        app:layout_constraintTop_toBottomOf="@+id/uploadAlbum"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

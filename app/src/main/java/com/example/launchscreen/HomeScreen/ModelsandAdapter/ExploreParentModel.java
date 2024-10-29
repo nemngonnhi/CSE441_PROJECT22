@@ -1,4 +1,4 @@
-package com.example.home.models;
+package com.example.launchscreen.HomeScreen.ModelsandAdapter;
 
 import java.util.List;
 

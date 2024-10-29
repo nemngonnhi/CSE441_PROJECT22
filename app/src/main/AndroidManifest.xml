@@ -13,10 +13,22 @@
         android:theme="@style/Theme.LaunchScreen"
         tools:targetApi="31">
         <activity
-            android:name=".activity_login"
+            android:name=".HomeScreen.Activities.UploadEntities"
             android:exported="false" />
         <activity
-            android:name=".SignInActivity"
+            android:name=".HomeScreen.Activities.SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginandSignin.SignUp"
+            android:exported="false" />
+        <activity
+            android:name=".HomeScreen.HomeActivities"
+            android:exported="false" />
+        <activity
+            android:name=".LoginandSignin.activity_login"
+            android:exported="false" />
+        <activity
+            android:name=".LoginandSignin.SignInActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

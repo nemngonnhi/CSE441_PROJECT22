@@ -1,4 +1,4 @@
-package com.example.home.models;
+package com.example.launchscreen.HomeScreen.ModelsandAdapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,8 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.home.R;
-import com.example.home.fragments.HomeFragment;
+import com.example.launchscreen.R;
 
 import java.util.List;
 
@@ -27,13 +26,13 @@ public class HomeParentAdapter extends RecyclerView.Adapter<HomeParentAdapter.Vi
 
     @NonNull
     @Override
-    public HomeParentAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.home_parent_rv_layout, null, false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull HomeParentAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
         holder.tv_parent_title.setText(homeParentModelList.get(position).Title);
 
