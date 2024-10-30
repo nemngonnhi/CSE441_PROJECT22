@@ -1,16 +1,21 @@
 package com.example.myapplication;
 
+import android.animation.ObjectAnimator;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.view.View;
+import android.view.animation.LinearInterpolator;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.imageview.ShapeableImageView;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -20,7 +25,7 @@ import java.util.TimerTask;
 public class MainActivity extends AppCompatActivity {
 
 
-    //doan nay la de lay 2 cai so dau vs cuoi
+    //doan nay la de lay 2 tgian current voi duration
     public String msToTimer(long ms){
         String timerString = "";
         String secondString;
@@ -60,7 +65,9 @@ public class MainActivity extends AppCompatActivity {
     MediaPlayer music;
     ImageButton btnpnp;
     ImageButton btnloop;
+    TextView tvsongname;
 
+    ShapeableImageView img;
     //seekbar
     SeekBar seekBar;
     TextView currentTime;
@@ -76,7 +83,8 @@ public class MainActivity extends AppCompatActivity {
         music = MediaPlayer.create(this, R.raw.sound);
         btnpnp = findViewById(R.id.btn_pnp);
         btnloop = findViewById(R.id.btn_loop);
-
+        tvsongname = findViewById(R.id.tv_songname);
+        img = findViewById(R.id.songimg);
 
         currentTime = findViewById(R.id.tv_currentTime);
         duration = findViewById(R.id.tv_duration);
@@ -84,6 +92,10 @@ public class MainActivity extends AppCompatActivity {
         seekBar = findViewById(R.id.seekBar);
         seekBar.setProgress(0);
         seekBar.setMax(music.getDuration());
+
+        ObjectAnimator animator = ObjectAnimator.ofFloat(img, "rotation", 0f, 360f);
+        animator.setDuration(8000);
+        animator.setRepeatCount(ObjectAnimator.INFINITE);
 
         //play and pause
         btnpnp.setOnClickListener(new View.OnClickListener() {
@@ -93,16 +105,23 @@ public class MainActivity extends AppCompatActivity {
                 RunningSeekBar runningSeekBar = new RunningSeekBar();
                 handler.post(runningSeekBar);
 
-                if (!music.isPlaying()) {
-                    music.start();
-                    btnpnp.setImageResource(R.drawable.baseline_pause_24);
-                } else {
+                animator.setInterpolator(new LinearInterpolator());
+
+                if (music.isPlaying()) {
                     music.pause();
                     btnpnp.setImageResource(R.drawable.baseline_play_arrow_24);
+                    animator.cancel();
+                    //clickStartService();
+                } else {
+                    music.start();
+                    btnpnp.setImageResource(R.drawable.baseline_pause_24);
+                    animator.start();
+                    //clickStopService();
                 }
             }
-        }
-        );
+
+
+        });
 
         //seekbar change
 
@@ -127,4 +146,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void clickStartService(){
+
+        Intent intent = new Intent(this, MyService.class);
+        intent.putExtra("data_intent", tvsongname.getText().toString().trim());
+        startService(intent);
+    }
+    private void clickStopService(){
+        Intent intent = new Intent(this, MyService.class);
+        stopService(intent);
+    }
 }

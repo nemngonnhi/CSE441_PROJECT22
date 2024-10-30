@@ -16,8 +16,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".MusicPlayer"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="31dp">
+        app:layout_constraintStart_toStartOf="parent">
 
 
         <TextView
@@ -43,16 +42,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_playingfromplaylist" />
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/songimg"
             android:layout_width="350dp"
             android:layout_height="350dp"
+            android:src="@drawable/img001"
+            app:shapeAppearance="@style/roundedImageView"
+            android:scaleType="centerCrop"
             android:layout_marginTop="20dp"
-            app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_playlistname"
-            app:srcCompat="@drawable/img001" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_playlistname" />
 
         <TextView
             android:id="@+id/tv_songname"
@@ -166,6 +166,16 @@
             android:backgroundTint="@color/primcolor"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageButton
+            android:id="@+id/btn_favourite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primcolor"
+            app:srcCompat="@drawable/favbtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_artist"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
