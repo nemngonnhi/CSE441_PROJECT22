@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "704351935731",
+    "project_id": "musium-9735d",
+    "storage_bucket": "musium-9735d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:704351935731:android:7bf7dcd3650ec0ac516b86",
+        "android_client_info": {
+          "package_name": "com.example.launchscreen"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1cYvx7HIZUiEbtX9RE8ZJmeIqAsrMiX4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

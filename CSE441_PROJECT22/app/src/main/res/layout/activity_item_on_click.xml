@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeScreen.Fragments.ItemOnClickFragment"
+    android:padding="10dp"
+    android:background="@color/primcolor"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/static_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Artist or Genre/album"
+        android:textColor="@color/titlecolor"
+        android:textAlignment="center"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        />
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/item_onclick_img"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:src="@drawable/rhymastic_img"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/roundedCornerImageView"
+        android:layout_marginTop="12dp"
+        />
+
+    <TextView
+        android:id="@+id/item_onclick_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif"
+        android:text="Tên Ca sĩ hoặc album, genre"
+        android:textColor="@color/white"
+        android:textSize="28sp" />
+    <TextView
+        android:id="@+id/item_onclick_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="đây là mô tả"
+        android:textColor="@color/white"
+        android:textAlignment="textStart"
+        android:textSize="16sp"
+        android:layout_marginTop="12dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Related:"
+        android:textSize="20sp"
+        android:layout_marginTop="12dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/item_onclick_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:layout_marginTop="12dp"/>
+
+
+</LinearLayout>
