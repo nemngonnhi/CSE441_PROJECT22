@@ -20,10 +20,19 @@
         android:textSize="32dp"
         android:textStyle="bold"
         />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/item_onclick_img"
-        android:layout_width="240dp"
-        android:layout_height="240dp"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
         android:src="@drawable/rhymastic_img"
         android:scaleType="centerCrop"
         app:shapeAppearanceOverlay="@style/roundedCornerImageView"
@@ -32,13 +41,15 @@
 
     <TextView
         android:id="@+id/item_onclick_name"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:fontFamily="sans-serif"
         android:text="Tên Ca sĩ hoặc album, genre"
         android:textColor="@color/white"
-        android:textSize="28sp" />
+        android:textSize="28sp"
+        android:textAlignment="center"/>
+
     <TextView
         android:id="@+id/item_onclick_description"
         android:layout_width="match_parent"
@@ -47,21 +58,18 @@
         android:textColor="@color/white"
         android:textAlignment="textStart"
         android:textSize="16sp"
-        android:layout_marginTop="12dp"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"/>
+        android:padding="10dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Related:"
-        android:textSize="20sp"
-        android:layout_marginTop="12dp"/>
+        android:textSize="20sp"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/item_onclick_rv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:padding="10dp"
         android:layout_marginTop="12dp"/>
-
-
+    </LinearLayout>
+    </ScrollView>
 </LinearLayout>

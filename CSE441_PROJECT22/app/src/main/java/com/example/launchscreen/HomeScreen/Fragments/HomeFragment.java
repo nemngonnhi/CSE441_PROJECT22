@@ -125,7 +125,7 @@ public class HomeFragment extends Fragment implements HomeParentAdapter.OnHomeCh
 
         popularAlbum.add(new HomeChildModel(R.drawable.album1989_img, "1989"));
         popularAlbum.add(new HomeChildModel(R.drawable.reputation_img, "Reputation"));
-        popularAlbum.add(new HomeChildModel(R.drawable.quakhungcuaso, "Qua khung cửa sổ"));
+        popularAlbum.add(new HomeChildModel(R.drawable.quakhungcuaso, "QuaKhungCuaSo"));
 
         homeParentModelsArrayList.add(new HomeParentModel("Popular Album", popularAlbum));
 
