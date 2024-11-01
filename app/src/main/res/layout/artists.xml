@@ -116,88 +116,32 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            android:padding="16dp">
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/MtBtn_2"
-                android:layout_width="330dp"
-                android:layout_height="87dp"
-                android:backgroundTint="@color/black"
-                android:text="Your Liked Songs"
-                android:textSize="20dp"
-                app:icon="@drawable/love"
-                app:iconSize="60dp"
-                app:iconTint="@null" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/MtBtn_1"
-                android:layout_width="330dp"
-                android:layout_height="87dp"
-                android:layout_marginTop="4dp"
-                android:backgroundTint="@color/black"
-                android:text="Add New Playlist"
-                android:textSize="20dp"
-                app:icon="@drawable/add"
-                app:iconSize="60dp"
-                app:iconTint="@null" />
-
+            <!-- Sort By TextView -->
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/sort_by"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:text="Sort By"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_weight="1"/>
+
+            <!-- Recently played TextView -->
+            <TextView
+                android:id="@+id/recently_played"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="Recently played"
                 android:textColor="#00BCD4"
-                android:textSize="18dp"
-                android:layout_marginStart="16dp"/>
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:backgroundTint="@color/black"
-                android:text="moods"
-                android:textAlignment="textStart"
-                android:textSize="18dp"
-                app:icon="@drawable/music"
-                app:iconTint="@null"
-                app:iconSize="80dp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:backgroundTint="@color/black"
-                android:text="randoms"
-                android:textAlignment="textStart"
-                android:textSize="18dp"
-                app:icon="@drawable/music"
-                app:iconTint="@null"
-                app:iconSize="80dp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:backgroundTint="@color/black"
-                android:text="my life"
-                android:textAlignment="textStart"
-                android:textSize="18dp"
-                app:icon="@drawable/music"
-                app:iconTint="@null"
-                app:iconSize="80dp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:backgroundTint="@color/black"
-                android:text="styles of me"
-                android:textAlignment="textStart"
-                android:textSize="18dp"
-                app:icon="@drawable/music"
-                app:iconTint="@null"
-                app:iconSize="80dp" />
-
+                android:textSize="16sp"/>
         </LinearLayout>
+
     </ScrollView>
 
 

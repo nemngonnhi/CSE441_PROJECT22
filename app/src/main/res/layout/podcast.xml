@@ -125,21 +125,9 @@
                 android:layout_width="330dp"
                 android:layout_height="87dp"
                 android:backgroundTint="@color/black"
-                android:text="Your Liked Songs"
+                android:text="Your Liked Playlist"
                 android:textSize="20dp"
                 app:icon="@drawable/love"
-                app:iconSize="60dp"
-                app:iconTint="@null" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/MtBtn_1"
-                android:layout_width="330dp"
-                android:layout_height="87dp"
-                android:layout_marginTop="4dp"
-                android:backgroundTint="@color/black"
-                android:text="Add New Playlist"
-                android:textSize="20dp"
-                app:icon="@drawable/add"
                 app:iconSize="60dp"
                 app:iconTint="@null" />
 
@@ -148,54 +136,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Recently played"
+                android:text="Recently added"
                 android:textColor="#00BCD4"
                 android:textSize="18dp"
                 android:layout_marginStart="16dp"/>
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:backgroundTint="@color/black"
-                android:text="moods"
-                android:textAlignment="textStart"
-                android:textSize="18dp"
-                app:icon="@drawable/music"
-                app:iconTint="@null"
-                app:iconSize="80dp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:backgroundTint="@color/black"
-                android:text="randoms"
-                android:textAlignment="textStart"
-                android:textSize="18dp"
-                app:icon="@drawable/music"
-                app:iconTint="@null"
-                app:iconSize="80dp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:backgroundTint="@color/black"
-                android:text="my life"
-                android:textAlignment="textStart"
-                android:textSize="18dp"
-                app:icon="@drawable/music"
-                app:iconTint="@null"
-                app:iconSize="80dp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:backgroundTint="@color/black"
-                android:text="styles of me"
-                android:textAlignment="textStart"
-                android:textSize="18dp"
-                app:icon="@drawable/music"
-                app:iconTint="@null"
-                app:iconSize="80dp" />
 
         </LinearLayout>
     </ScrollView>
