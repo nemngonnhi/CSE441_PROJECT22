@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        tools:srcCompat="@drawable/musium_logo" />
+        android:src="@drawable/musium_logo" />
 
     <TextView
         android:id="@+id/tvName"
