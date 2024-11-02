@@ -205,14 +205,15 @@ public class MusicPlayerActivity extends AppCompatActivity {
         });
 
     }
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if (music != null) {
-            music.release();
-            music = null;
-        }
-    }
+//    @Override
+//    protected void onDestroy() {
+//        super.onDestroy();
+//        if (music != null) {
+//            music.release();
+//            music = null;
+//        }
+//        finish();
+//    }
 // dinh lam forgegroundservice
 //    private void clickStartService(){
 //

@@ -2,6 +2,7 @@ package com.example.launchscreen.HomeScreen.Activities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,7 +34,16 @@ public class ItemOnClickActivity extends AppCompatActivity {
     ArrayList<SongModel> songModelList;
     SongAdapter songAdapter;
 
+    private MediaPlayer mediaPlayer;
+
     public void onSongClick(SongModel songModel){
+
+        if (mediaPlayer != null && mediaPlayer.isPlaying()){
+            mediaPlayer.stop();
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+
         Intent intent = new Intent(ItemOnClickActivity.this, MusicPlayerActivity.class);
         intent.putExtra("songName", songModel.getSongName());
         intent.putExtra("songArtist", songModel.getSongArtist());
@@ -138,5 +148,6 @@ public class ItemOnClickActivity extends AppCompatActivity {
         });
 
     }
+
 
 }
